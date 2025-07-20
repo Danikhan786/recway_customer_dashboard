@@ -1,11 +1,4 @@
-    'upload_document_cv' => 'Ladda upp dokument/CV',
-    'click_to_upload' => 'Klicka för att ladda upp',
-    'Interview Template' => 'Intervjumall',
-    'upload_interview_template' => 'Ladda upp intervjumall',
-    'order_note' => 'Ordernotering',
-    'invoice_recipent' => 'Fakturamottagare',
-    'enter_reference_invoice' => 'Ange referens (Fakturamottagare)',
-    'enter_reference' => 'Ange referens',
+
 <?php
 
 return [
@@ -155,6 +148,15 @@ return [
 
     'all_current_orders' => 'Alla aktuella beställningar',
 
+
+    'upload_document_cv' => 'Ladda upp dokument/CV',
+    'click_to_upload' => 'Klicka för att ladda upp',
+    'Interview Template' => 'Intervjumall',
+    'upload_interview_template' => 'Ladda upp intervjumall',
+    'order_note' => 'Ordernotering',
+    'invoice_recipent' => 'Fakturamottagare',
+    'enter_reference_invoice' => 'Ange referens (Fakturamottagare)',
+    'enter_reference' => 'Ange referens',
 
 ];
 
