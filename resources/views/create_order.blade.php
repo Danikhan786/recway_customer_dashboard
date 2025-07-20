@@ -782,7 +782,7 @@
                 <div class="modal-content ">
                     <div class="modal-header">
                         <h5 class="modal-title f-16 w-600 text-black" id="exampleModalLabel">
-                            {{ getTranslatedText('integrity_policy') }}
+                            {{ __('messages.integrity_policy') }}
                         </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                             aria-label="Close"></button>
@@ -793,7 +793,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="form-btn"
-                            data-bs-dismiss="modal">{{ getTranslatedText('close') }}</button>
+                            data-bs-dismiss="modal">{{ __('messages.close') }}</button>
                     </div>
                 </div>
             </div>
@@ -804,7 +804,7 @@
                 <div class="modal-content ">
                     <div class="modal-header">
                         <h5 class="modal-title f-16 w-600 text-black" id="exampleModalLabel">
-                            {{ getTranslatedText('included_things') }}
+                            {{ __('messages.included_things') }}
                         </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                             aria-label="Close"></button>
@@ -814,7 +814,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="form-btn"
-                            data-bs-dismiss="modal">{{ getTranslatedText('close') }}</button>
+                            data-bs-dismiss="modal">{{ __('messages.close') }}</button>
                     </div>
                 </div>
             </div>

@@ -285,7 +285,7 @@ $current_time = date('h:i A');
                                     <h1>{{ __('messages.hello') }}, {{ Auth::user()->name }} <img
                                             src="assets/images/dashboard-1/hand.png" alt="" /></h1>
                                 </div>
-                                {{ getTranslatedText('hello_message') }}
+                                 {{ __('messages.hello_message') }}
                                 <div class="d-flex align-center justify-content-between mt-2">
                                     <a class="btn btn-primary"
                                         href="{{ route('create_order') }}">{{ __('messages.create_order') }}</a>
@@ -695,7 +695,7 @@ $current_time = date('h:i A');
             onmouseover="cancelHide('history_log<?= $recentOrder->id ?>')"
             onmouseout="forceHide('history_log<?= $recentOrder->id ?>')">
             <div class="card-header pb-0 card-no-border">
-                <h3>{{ getTranslatedText('order_logs') }}</h3>
+                <h3>{{ __('messages.order_logs') }}</h3>
             </div>
             <div class="card-body notification">
                 <ul>
@@ -719,7 +719,7 @@ $current_time = date('h:i A');
                         @endforeach
                     @else
                         <li>
-                            <div class="time">{{ getTranslatedText('no_record_found') }}</div>
+                            <div class="time">{{ __('messages.no_record_found') }}</div>
                         </li>
                     @endif
                 </ul>

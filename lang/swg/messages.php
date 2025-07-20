@@ -1,6 +1,35 @@
+    'upload_document_cv' => 'Ladda upp dokument/CV',
+    'click_to_upload' => 'Klicka för att ladda upp',
+    'Interview Template' => 'Intervjumall',
+    'upload_interview_template' => 'Ladda upp intervjumall',
+    'order_note' => 'Ordernotering',
+    'invoice_recipent' => 'Fakturamottagare',
+    'enter_reference_invoice' => 'Ange referens (Fakturamottagare)',
+    'enter_reference' => 'Ange referens',
 <?php
 
 return [
+    // Added for view-order.blade.php
+    'View Order' => 'Visa Beställning',
+    'Candidate Name' => 'Kandidatens namn',
+    'Candidate Email' => 'Kandidatens e-post',
+    'Security Number' => 'Personnummer',
+    'VASC ID' => 'VASC ID',
+    'document_cv' => 'Dokument/CV',
+    'Background Check Report' => 'Bakgrundskontrollrapport',
+    'interview_template' => 'Intervjumall',
+    'no_attachments_found' => 'Inga bilagor hittades',
+    'interview_report' => 'Intervjurrapport',
+    'Only visiable to you and us ' => 'Endast synlig för dig och oss',
+    'Result' => 'Resultat',
+    'Cancel Order' => 'Avbryt beställning',
+    'Comment (Add a reason to cancel this order)' => 'Kommentar (Ange en anledning till att avbryta denna beställning)',
+    'Close' => 'Stäng',
+    'Change Status' => 'Ändra status',
+    'Select Status' => 'Välj status',
+    'choose_status' => 'Välj status',
+    'comment' => 'Kommentar',
+    'enter_comment' => 'Ange kommentar',
     'dashboard' => 'Instrumentpanelen',
     'swedish' => 'Svenska',
     'english' => 'Engelska',
@@ -8,6 +37,8 @@ return [
     'order' => 'Beställningar',
     'archieved' => 'Arkiverad',
     'hello' => 'Hej',
+    'hello_message' => 'Välkommen till Recway! Här kan du hantera dina beställningar och kontoinställningar.',
+    'clear' => 'Rensa',
     'recent_orders' => 'Senaste  Beställningar',
     'filter' => 'Filter',
     'service_categories' => 'Tjänstekategorier',
@@ -37,6 +68,7 @@ return [
     'candidate_info' => 'Kandidatinformation',
     'attachment' => 'Bilaga',
     'billing_details' => 'Faktureringsuppgifter',
+    'mandatory_fields' => 'Obligatoriska fält',
     'place' => 'Plats',
     'country' => 'Land',
     'next' => 'Nästa',
@@ -49,6 +81,7 @@ return [
     'account'=>'Konto',
     'email_setting'=>'E-postinställning',
     'logout'=>'Logga ut',
+    'Edit Order' => 'Redigera Beställning',
     'customer'=>'Kund',
     'copyright'=>'Copyright © 2024 | Alla rättigheter förbehållna av',
     'name'=>"Namn",
@@ -92,6 +125,8 @@ return [
     'last_login' => 'Senaste inloggning',
     'update' => 'Uppdatera',
 
+    'close' => 'Stäng',
+    'included_things' => 'Inkluderade saker',
     'email_settings_note' => 'I e-postinställningarna kan du justera för vilka statusar du ska få e-postavisering vid uppdatering',
     'status_selection_note' => 'OBS: (Välj de statusar du vill få e-post om. Vid uppdatering av den statusen får du en avisering)',
     //for add_reviewer.blade.php
@@ -100,7 +135,10 @@ return [
     'email' => 'E-post',
     'password' => 'Lösenord',
     //for add-reviewer.blade.php
+    'order_logs' => 'Beställningsloggar',
+    'no_record_found' => 'Inga poster hittades',
     'submit_add_reviewer' => 'Lägg till granskare',
+    'integrity_policy' => 'Integritetspolicy',
      //for change-password.blade.php
      'reset_password' => 'Återställ lösenord',
     'reset_password_note' => 'Ange ett nytt lösenord.',
@@ -114,6 +152,9 @@ return [
     'data_locality_description' => 'Våra servrar är säkert placerade i Sverige och drivs inom landet.',
     'data_retention' => 'Databevarande',
     'data_retention_description' => 'Systemet har inbyggd funktionalitet för att ta bort kunddata från system och säkerhetskopior.',
+
+    'all_current_orders' => 'Alla aktuella beställningar',
+
 
 ];
 

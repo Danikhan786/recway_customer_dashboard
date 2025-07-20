@@ -333,7 +333,7 @@
                     onmouseover="cancelHide('history_log<?= $order->id ?>')"
                     onmouseout="forceHide('history_log<?= $order->id ?>')">
                     <div class="card-header pb-0 card-no-border">
-                        <h3>{{ getTranslatedText('order_logs') }}</h3>
+                        <h3> {{ __('messages.order_logs') }}</h3>
                     </div>
                     <div class="card-body notification">
                         <ul>
@@ -355,7 +355,7 @@
                                 @endforeach
                             @else
                                 <li>
-                                    <div class="time">{{ getTranslatedText('no_record_found') }}</div>
+                                    <div class="time">{{ __('messages.no_record_found') }}</div>
                                 </li>
                             @endif
                         </ul>

@@ -107,7 +107,7 @@
                                 </svg>
                                 <form id="logout-form" method="POST" action="{{ route('logout') }}">
                                     @csrf
-                                    <a href="#" class="ms-2" onclick="document.getElementById('logout-form').submit();">{{getTranslatedText('logout')}}</a>
+                                    <a href="#" class="ms-2" onclick="document.getElementById('logout-form').submit();">{{ __('messages.logout') }}</a>
                                 </form>
                             </li>
                         </ul>

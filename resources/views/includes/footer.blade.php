@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row text-center">
       <div class="col-md-12 footer-copyright">
-      <p class="mb-0">Copyright © <?php echo date('Y'); ?> | {{getTranslatedText('copyright')}} <strong>Recway AB</strong></p>
+      <p class="mb-0">Copyright © <?php echo date('Y'); ?> | {{ __('messages.copyright') }}<strong>Recway AB</strong></p>
       </div>
     </div>
   </div>

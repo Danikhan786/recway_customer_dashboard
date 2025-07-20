@@ -3,9 +3,9 @@
 </style>
 @php
     $document = 0;
-    $InvoiceRecipient = getTranslatedText('invoice_recipent');
-    $InvoiceReference = getTranslatedText('reference');
-    $InvoiceComment = getTranslatedText('invoice_comment');
+    $InvoiceRecipient = __('messages.invoice_recipent');
+    $InvoiceReference = __('messages.reference');
+    $InvoiceComment = __('messages.invoice_comment');
     if (!empty($form_builder)) {
         $form = json_decode($form_builder['form'])->form_builder;
         if (!empty($form->personal_info)) {
@@ -58,14 +58,14 @@
                 <div class="page-title">
                     <div class="row">
                         <div class="col-sm-6 col-12">
-                            <h2>{{getTranslatedText('order_id')}}: {{$candidate->order_id }}</h2>
+                            <h2>{{ __('messages.order_id') }}: {{$candidate->order_id }}</h2>
                         </div>
                         <div class="col-sm-6 col-12">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html"><i
                                             class="iconly-Home icli svg-color"></i></a></li>
-                                            <li class="breadcrumb-item">{{getTranslatedText('recway')}}</li>
-                                            <li class="breadcrumb-item active">{{getTranslatedText('View Order')}}</li>
+                                            <li class="breadcrumb-item">{{ __('messages.recway') }}</li>
+                                            <li class="breadcrumb-item active">{{ __('messages.View Order') }}</li>
                             </ol>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                                                                     <div class="stroke-icon-wizard"><i
                                                                             class="fa-solid fa-user"></i></div>
                                                                     <div class="cart-options-content">
-                                                                        <h6 class="f-w-700">{{getTranslatedText('candidate_info')}}</h6>
+                                                                        <h6 class="f-w-700">{{ __('messages.candidate_info') }}</h6>
                                                                     </div>
                                                                 </div>
                                                             </a>
@@ -111,7 +111,7 @@
                                                                         <div class="stroke-icon-wizard"><i
                                                                                 class="fa-solid fa-paperclip"></i></div>
                                                                         <div class="cart-options-content">
-                                                                            <h6 class="f-w-700">{{getTranslatedText('attachment')}}</h6>
+                                                                            <h6 class="f-w-700">{{ __('messages.attachment') }}</h6>
                                                                         </div>
                                                                     </div>
                                                                 </a>
@@ -124,7 +124,7 @@
                                                                     <div class="stroke-icon-wizard"><i
                                                                     class="fa-solid fa-money-bill"></i></div>
                                                                     <div class="cart-options-content">
-                                                                        <h6 class="f-w-700">{{getTranslatedText('billing_details')}}</h6>
+                                                                        <h6 class="f-w-700">{{ __('messages.billing_details') }}</h6>
                                                                     </div>
                                                                 </div>
                                                             </a>
@@ -136,7 +136,7 @@
                                                                 <div class="stroke-icon-wizard"><i
                                                                 class="fa-solid fa-square-check"></i></div>
                                                                 <div class="cart-options-content">
-                                                                    <h6 class="f-w-700">{{getTranslatedText('additional_note')}}</h6>
+                                                                    <h6 class="f-w-700">{{ __('messages.additional_note') }}</h6>
                                                                 </div>
                                                             </div>
                                                         </a>
@@ -155,7 +155,7 @@
                                                                     <div class="stroke-icon-wizard"><i
                                                                             class="fa-solid fa-paperclip"></i></div>
                                                                     <div class="cart-options-content">
-                                                                        <h6 class="f-w-700">{{getTranslatedText('Result')}}</h6>
+                                                                        <h6 class="f-w-700">{{ __('messages.Result') }}</h6>
                                                                     </div>
                                                                 </div>
                                                             </a>
@@ -177,54 +177,54 @@
                                                         class="row g-3 needs-validation custom-input validation-vertical-wizard"
                                                         novalidate="">
                                                         <div class="col-md-6 col-sm-12 mb-3">
-                                                            <h6><b>{{getTranslatedText('order_id')}}</b>:</h6>
+                                                            <h6><b>{{ __('messages.order_id') }}</b>:</h6>
                                                             <span>{{$candidate->order_id }}</span>
                                                         </div>
                                                         <div class="col-md-6 col-sm-12 mb-3">
-                                                            <h6><b>{{getTranslatedText('status')}}</b>:</h6>
+                                                            <h6><b>{{ __('messages.status') }}</b>:</h6>
                                                             <span class="badge badge-pill" style="background-color:<?= $candidate->status_color ?>">{{ $candidate->status_title }}</span>
                                                         </div>
                                                         <div class="col-md-6 col-sm-12 mb-3">
-                                                            <h6><b>{{getTranslatedText('Candidate Name')}}</b></h6>
+                                                            <h6><b>{{ __('messages.Candidate Name') }}</b></h6>
                                                             <span>{{$candidate->name . " ". $candidate->surname}}</span>
                                                         </div>
                                                         <div class="col-md-6 col-sm-12 mb-3">
-                                                            <h6><b>{{getTranslatedText('Candidate Email')}}</b></h6>
+                                                            <h6><b>{{ __('messages.Candidate Email') }}</b></h6>
                                                             <span>{{$candidate->email }}</span>
                                                         </div>
                                                         <div class="col-md-6 col-sm-12 mb-3">
-                                                            <h6><b>{{getTranslatedText('Security Number')}}</b></h6>
+                                                            <h6><b>{{ __('messages.Security Number') }}</b></h6>
                                                             <span>{{$candidate->security }}</span>
                                                         </div>
                                                         @if (!empty($candidate->vasc_id))
                                                         <div class="col-md-6 col-sm-12 mb-3">
-                                                            <h6><b>{{getTranslatedText('VASC ID')}}</b></h6>
+                                                            <h6><b>{{ __('messages.VASC ID') }}</b></h6>
                                                             <span>{{ $candidate->vasc_id }}</span>
                                                         </div>
                                                         @endif
                                                         <div class="col-md-6 col-sm-12 mb-3">
-                                                            <h6><b>{{getTranslatedText('service_type')}}</b></h6>
+                                                            <h6><b>{{ __('messages.service_type') }}</b></h6>
                                                             <span>{{ $candidate->interview_title }}</span>
                                                         </div>
                                                         @if(!empty($candidate->booked))
                                                         <div class="col-md-6 col-sm-12 mb-3">
-                                                            <h6><b>{{getTranslatedText('interview_date')}}</b></h6>
+                                                            <h6><b>{{ __('messages.interview_date') }}</b></h6>
                                                             <span>{{ $candidate->booked }}</span>
                                                         </div>
                                                         @endif
                                                         <div class="col-md-6 col-sm-12 mb-3">
-                                                            <h6><b>{{getTranslatedText('phone')}}</b></h6>
+                                                            <h6><b>{{ __('messages.phone') }}</b></h6>
                                                             <span>{{ $candidate->phone ?? 'Null' }}</span>
                                                         </div>
                                                         @if (!empty($candidate->place))
                                                         <div class="col-md-6 col-sm-12 mb-3">
-                                                            <h6><b>{{getTranslatedText('place')}}</b></h6>
+                                                            <h6><b>{{ __('messages.place') }}</b></h6>
                                                             <span>{{$candidate->place_name }}</span>
                                                         </div>
                                                         @endif
                                                         @if (!empty($candidate->country))
                                                         <div class="col-md-6 col-sm-12 mb-3">
-                                                            <h6><b>{{getTranslatedText('country')}}</b></h6>
+                                                            <h6><b>{{ __('messages.country') }}</b></h6>
                                                             <span>{{ $candidate->country }}</span>
                                                         </div>
                                                         @endif
@@ -251,7 +251,7 @@
                                                         @if (!empty($candidate->cv) || !empty($candidate->report) || !empty($candidate->interview_template))
                                                                                                             @if (!empty($candidate->cv))
                                                                                                                                                                 <div class="col-md-12 col-sm-12 mb-3 mt-3">
-                                                                                                                                                                    <h6><b>{{getTranslatedText('document_cv')}}</b></h6>
+                                                                                                                                                                    <h6><b>{{ __('messages.document_cv') }}</b></h6>
                                                                                                                                                                     @php
                                                                                                                                                                         $documents = explode(',', $candidate->cv);
                                                                                                                                                                     @endphp
@@ -272,7 +272,7 @@
 
                                                                                                             @if (!empty($candidate->report))
                                                                                                                 <div class="col-md-12 col-sm-12 mb-3 mt-3">
-                                                                                                                    <h6><b>{{getTranslatedText('Background Check Report')}}</b></h6>
+                                                                                                                    <h6><b>{{ __('messages.Background Check Report') }}</b></h6>
                                                                                                                     <span
                                                                                                                         style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis">
                                                                                                                         <a target="_blank"
@@ -287,7 +287,7 @@
 
                                                                                                             @if (!empty($candidate->interview_template))
                                                                                                                 <div class="col-md-12 col-sm-12 mb-3 mt-3">
-                                                                                                                    <h6><b>{{getTranslatedText('interview_template')}}</b></h6>
+                                                                                                                    <h6><b>{{ __('messages.interview_template') }}</b></h6>
                                                                                                                     <span
                                                                                                                         style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis">
                                                                                                                         <a target="_blank"
@@ -300,7 +300,7 @@
                                                                                                                 </div>
                                                                                                             @endif
                                                         @else
-                                                            <h5 style="text-align:center; margin-top:5rem">{{getTranslatedText('no_attachments_found')}}</h5>
+                                                            <h5 style="text-align:center; margin-top:5rem">{{ __('messages.no_attachments_found') }}</h5>
                                                         @endif
 
                                                     </form>
@@ -322,7 +322,7 @@
 
 
                                                             <div class="col-md-12 col-sm-12 mb-3 mt-3">
-                                                                <h6><b>{{getTranslatedText('Background Check Report')}}</b></h6>
+                                                                <h6><b>{{ __('messages.Background Check Report') }}</b></h6>
                                                                 <span
                                                                     style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis">
                                                                     <a target="_blank"
@@ -341,7 +341,7 @@
   )
 )
                                                                 <div class="col-md-12 col-sm-12 mb-3 mt-3">
-                                                                    <h6><b>{{getTranslatedText('interview_report')}}</b></h6>
+                                                                    <h6><b>{{ __('messages.interview_report') }}</b></h6>
                                                                                 @php
                         $decodedReport = json_decode($candidate->interview_report, true);
                         $reports = [];
@@ -352,7 +352,7 @@
                         }
                     @endphp
                                                                 <div class="col-md-12 col-sm-12 mb-3 mt-3">
-                                                                    <h6><b>{{getTranslatedText('interview_report')}}</b></h6>
+                                                                    <h6><b>{{ __('messages.interview_report') }}</b></h6>
                                                                                             @foreach ($reports as $key => $file)
                             <span style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; display: block;">
                                 <a target="_blank"
@@ -407,7 +407,7 @@
                                                         class="row g-3 mb-3 needs-validation custom-input vartical-validation validation-vertical-wizard"
                                                         novalidate="">
                                                         <div class="col-md-12 col-sm-12 mb-3 mt-3">
-                                                            <h6><b>{{getTranslatedText('Only visiable to you and us ')}}</b></h6>
+                                                            <h6><b>{{ __('messages.Only visiable to you and us ') }}</b></h6>
                                                             <span>
                                                                 @if (!empty($candidate->note))
                                                                     {{$candidate->note}}
@@ -430,21 +430,21 @@
                                                     <a href="{{ route('editOrder', ['id' => $candidate->id]) }}"
                                                         class="btn btn-secondary w-100">
                                                         <i class="icon-pencil-alt"></i>
-                                                        {{getTranslatedText('Edit Order')}}
+                                                        {{ __('messages.Edit Order') }}
                                                     </a>
                                                 </div>
                                                 <div class="col-4">
                                                     <button type="button" class="btn btn-info w-100" data-bs-placement="top"
                                                         data-bs-toggle="modal" data-bs-target="#changeStatus">
                                                         <i class="fas fa-edit"></i>
-                                                        {{getTranslatedText('Change Status')}}
+                                                        {{ __('messages.Change Status') }}
                                                     </button>
                                                 </div>
                                                 <div class="col-4">
                                                     <button type="button" class="btn btn-danger w-100" data-bs-placement="top"
                                                         data-bs-toggle="modal" data-bs-target="#delete">
                                                         <i class="icon-trash"></i>
-                                                        {{getTranslatedText('Cancel Order')}}
+                                                        {{ __('messages.Cancel Order') }}
                                                     </button>
                                                 </div>
                                             </div>
@@ -456,14 +456,14 @@
                                                     <a href="{{ route('editOrder', ['id' => $candidate->id]) }}"
                                                         class="btn btn-secondary w-100">
                                                         <i class="icon-pencil-alt"></i>
-                                                        {{getTranslatedText('Edit Order')}}
+                                                        {{ __('messages.Edit Order') }}
                                                     </a>
                                                 </div>
                                                 <div class="col-6">
                                                     <button type="button" class="btn btn-danger w-100" data-bs-placement="top"
                                                         data-bs-toggle="modal" data-bs-target="#delete">
                                                         <i class="icon-trash"></i>
-                                                        {{getTranslatedText('Cancel Order')}}
+                                                        {{ __('messages.Cancel Order') }}
                                                     </button>
 
                                                 </div>
@@ -481,7 +481,7 @@
                                     <div class="row g-3 ">
                                         <div class="col-xxl-12 col-xl-12 col-12 notification"
                                             style="padding-left: 20px;margin-bottom: 10px">
-                                            <h3 style="padding-left: 10px;margin-bottom: 20px;">{{getTranslatedText('order_logs')}}</h3>
+                                            <h3 style="padding-left: 10px;margin-bottom: 20px;">{{ __('messages.order_logs') }}</h3>
                                             <ul>
                                                 @if (!empty($history))
                                                     @foreach ($history as $h)
@@ -503,7 +503,7 @@
                                                     @endforeach
                                                 @else
                                                     <li>
-                                                        <div class="time">{{getTranslatedText('no_record_found')}}</div>
+                                                        <div class="time">{{ __('messages.no_record_found') }}</div>
                                                     </li>
                                                 @endif
                                             </ul>
@@ -521,7 +521,7 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content ">
                     <div class="modal-header">
-                        <h5 class="modal-title f-16 w-600 text-black" id="deleteLabel">{{getTranslatedText('Cancel Order')}}</h5>
+                        <h5 class="modal-title f-16 w-600 text-black" id="deleteLabel">{{ __('messages.Cancel Order') }}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body" style="padding-bottom: 0px;">
@@ -529,14 +529,14 @@
                             @csrf
                             <div class="row mb-3">
                                 <div class="col-md-12">
-                                    <label for="">{{getTranslatedText('Comment (Add a reason to cancel this order)')}}</label>
+                                    <label for="">{{ __('messages.Comment (Add a reason to cancel this order)') }}</label>
                                     <input type="text" name="comment" class="form-control" placeholder="Enter Comment">
                                     <input type="hidden" name="id" value="{{$candidate->id}}">
                                 </div>
                             </div>
                             <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{getTranslatedText('Close')}}</button>
-                            <button type="submit" class="btn btn-danger">         {{getTranslatedText('Cancel Order')}}</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('messages.Close') }}</button>
+                            <button type="submit" class="btn btn-danger">         {{ __('messages.Cancel Order') }}</button>
                             </div>
                         </form>
                     </div>
@@ -548,7 +548,7 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content ">
                 <div class="modal-header">
-                    <h5 class="modal-title f-16 w-600 text-black" id="changeStatusLabel">{{getTranslatedText('Change Status')}}</h5>
+                    <h5 class="modal-title f-16 w-600 text-black" id="changeStatusLabel">{{ __('messages.Change Status') }}</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" style="padding-bottom: 0px;">
@@ -556,9 +556,9 @@
                         @csrf
                         <div class="row mb-3">
                             <div class="col-md-12 mb-3">
-                                <label for="">{{getTranslatedText('Select Status')}}</label>
+                                <label for="">{{ __('messages.Select Status') }}</label>
                                 <select name="status" class="form-control">
-                                    <option value="">{{getTranslatedText('choose_status')}}</option>
+                                    <option value="">{{ __('messages.choose_status') }}</option>
                                     @if($candidate->status == 39)
                                     <option value="37" data-status-variable="Approved_followup">Approved</option>
                                     <option value="42" data-status-variable="Denied_followup">Denied</option>
@@ -569,17 +569,17 @@
                                 </select>
                             </div>
                             <div class="col-md-12">
-                                <label for="">{{getTranslatedText('comment')}}</label>
-                                <textarea name="comment" class="form-control" placeholder="{{getTranslatedText('enter_comment')}}"></textarea>
+                                <label for="">{{ __('messages.comment') }}</label>
+                                <textarea name="comment" class="form-control" placeholder="{{ __('messages.enter_comment') }}"></textarea>
                                 <input type="hidden" name="id" value="{{$candidate->id}}">
                                 <input type="date" id="date" style="display: none;">
                             </div>
                         </div>
                         <div class="modal-footer pr-0 pl-0">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{getTranslatedText('Close')}}</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('messages.Close') }}</button>
                             <button type="button" class="btn btn-info"
                             id="submit-btn"
-                            onclick="submitPDF(event,this)">{{getTranslatedText('Change Status')}}</button>
+                            onclick="submitPDF(event,this)">{{ __('messages.Change Status') }}</button>
                         </div>
                     </form>
                 </div>

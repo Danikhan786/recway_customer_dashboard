@@ -65,7 +65,7 @@
                                                 <th>#</th>
                                                 <th>{{__('messages.order_id')}}</th>
                                                 @if (isset($company_manager) && !empty($company_manager))
-                            <th>{{getTranslatedText('customer')}}</th>
+                            <th> {{ __('messages.customer') }}</th>
                             @endif
                                                 <th>{{__('messages.status')}}</th>
                                                 <th>{{__('messages.service_type')}}</th>

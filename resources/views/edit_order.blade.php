@@ -48,7 +48,7 @@ $billing = $form_data->billing_info;
                 <div class="page-title">
                     <div class="row">
                         <div class="col-sm-6 col-12">
-                            <h2>{{getTranslatedText('Edit Order')}}</h2>
+                            <h2>{{ __('messages.Edit Order') }}</h2>
                         </div>
                         <div class="col-sm-6 col-12">
                             <ol class="breadcrumb">
@@ -57,8 +57,8 @@ $billing = $form_data->billing_info;
                                         <i class="iconly-Home icli svg-color"></i>
                                     </a>
                                 </li>
-                                <li class="breadcrumb-item"> {{getTranslatedText('recway')}}</li>
-                                <li class="breadcrumb-item active">{{getTranslatedText('Edit Order')}}</li>
+                                <li class="breadcrumb-item">{{ __('messages.recway') }}</li>
+                                <li class="breadcrumb-item active">{{ __('messages.Edit Order') }}</li>
                             </ol>
                         </div>
                     </div>
@@ -86,7 +86,7 @@ $billing = $form_data->billing_info;
                                                                 <div class="cart-options">
                                                                     <div class="stroke-icon-wizard"><i class="fa-solid fa-user"></i></div>
                                                                     <div class="cart-options-content">
-                                                                        <h6 class="f-w-700">{{getTranslatedText('candidate_info')}}</h6>
+                                                                        <h6 class="f-w-700">{{ __('messages.candidate_info') }}</h6>
                                                                     </div>
                                                                 </div>
                                                             </a>
@@ -94,7 +94,7 @@ $billing = $form_data->billing_info;
                                                                 <div class="cart-options">
                                                                     <div class="stroke-icon-wizard"><i class="fa-solid fa-paperclip"></i></div>
                                                                     <div class="cart-options-content">
-                                                                        <h6 class="f-w-700">{{getTranslatedText('attachment')}}</h6>
+                                                                        <h6 class="f-w-700">{{ __('messages.attachment') }}</h6>
                                                                     </div>
                                                                 </div>
                                                             </a>
@@ -102,7 +102,7 @@ $billing = $form_data->billing_info;
                                                                 <div class="cart-options">
                                                                     <div class="stroke-icon-wizard"><i class="fa-solid fa-money-bill"></i></div>
                                                                     <div class="cart-options-content">
-                                                                        <h6 class="f-w-700">{{getTranslatedText('billing_details')}}</h6>
+                                                                        <h6 class="f-w-700">{{ __('messages.billing_details') }}</h6>
                                                                     </div>
                                                                 </div>
                                                             </a>
@@ -121,7 +121,7 @@ $billing = $form_data->billing_info;
                                                 <form id="step1Form" action="{{ route('updateOrder') }}" class="row g-3 tab-content needs-validation custom-input validation-vertical-wizard" method="post" enctype="multipart/form-data">
                                                     @csrf
                                                     <div class="tab-pane fade show active" id="wizard-contact" role="tabpanel" aria-labelledby="wizard-contact-tab">
-                                                    <span class="mb-2 mendatory_statment"><strong>{{getTranslatedText('mandatory_fields')}}</strong></span>
+                                                    <span class="mb-2 mendatory_statment"><strong>{{ __('messages.mandatory_fields') }}</strong></span>
                                                         <input type="hidden" id="service_type" value="{{ $candidate->interview_id }}">
                                                         <input type="hidden" name="id" value="{{ $candidate->id }}">
                                                         <div class="row" id="personal_info_row">
@@ -178,12 +178,12 @@ $billing = $form_data->billing_info;
                                                             <?php } else { ?>
                                                                 @php
                                                                 $doc_html = '<div class="col-md-12 col-sm-12 mb-2">
-                                                                    <label class="form-label">'. getTranslatedText('document') .'</label>
+                                                                    <label class="form-label">'. __('messages.document') .'</label>
                                                                     <div class="dropzone dropzone-secondary p-3" id="dropzoneArea" onclick="triggerFileInput()" style="text-align:center">
                                                                         <div class="dz-message needsclick">
                                                                             <i class="fa-solid fa-cloud-arrow-up"></i>
-                                                                            <h6>'. getTranslatedText('upload_document_cv') .'</h6>
-                                                                            <span class="note needsclick">('. getTranslatedText("click_to_upload") .')</span>
+                                                                            <h6>'. __('messages.upload_document_cv') .'</h6>
+                                                                            <span class="note needsclick">('. __('messages.click_to_upload') .')</span>
                                                                         </div>
                                                                     </div>
                                                                 </div>'
@@ -192,34 +192,34 @@ $billing = $form_data->billing_info;
                                                             @endforeach
                                                             @else
                                                             <div class="col-md-6 col-sm-12 mb-2">
-                                                                <label class="form-label" for="name">{{ getTranslatedText('name') }} <span class="text-danger">*</span></label>
+                                                                <label class="form-label" for="name">{{ __('messages.name') }} <span class="text-danger">*</span></label>
                                                                 <input class="form-control" name="name" type="text" placeholder="Enter name" required="" value="{{$candidate->name}}">
                                                             </div>
                                                             <div class="col-md-6 col-sm-12 mb-2">
-                                                                <label class="form-label" for="surname">{{ getTranslatedText('surname') }} <span class="text-danger">*</span></label>
+                                                                <label class="form-label" for="surname">{{ __('messages.surname') }} <span class="text-danger">*</span></label>
                                                                 <input class="form-control" name="surname" type="text" placeholder="Enter surname" required="" value="{{$candidate->surname}}">
                                                             </div>
                                                             <div class="col-md-6 col-sm-12 mb-2">
-                                                                <label class="form-label" for="email">{{ getTranslatedText('email') }} <span class="text-danger">*</span></label>
+                                                                <label class="form-label" for="email">{{ __('messages.email') }} <span class="text-danger">*</span></label>
                                                                 <input class="form-control" name="email" type="email" required="" placeholder="admiro@example.com" value="{{$candidate->email}}">
                                                             </div>
                                                             <div class="col-md-6 col-sm-12 mb-2">
-                                                                <label class="form-label" for="phone">{{ getTranslatedText('phone') }} <span class="text-danger">*</span></label>
+                                                                <label class="form-label" for="phone">{{ __('messages.phone') }} <span class="text-danger">*</span></label>
                                                                 <input class="form-control" name="phone" type="tel" required="" placeholder="Enter number" value="{{$candidate->phone}}">
                                                             </div>
                                                             <div class="col-md-6 col-sm-12 mb-2">
-                                                                <label class="form-label" for="ssn">{{getTranslatedText('Social Security Number')}} <span class="text-danger">*</span></label>
+                                                                <label class="form-label" for="ssn">{{ __('messages.Social Security Number') }} <span class="text-danger">*</span></label>
                                                                 <input class="form-control" name="security" type="text" required="" placeholder="Enter Social Security Number" value="{{$candidate->security}}">
                                                             </div>
                                                             <div class="col-md-6 col-sm-12 mb-2">
-                                                                <label class="form-label" for="vasc_id">{{getTranslatedText('VASC ID')}}</label>
+                                                                <label class="form-label" for="vasc_id">{{ __('messages.VASC ID') }}</label>
                                                                 <input class="form-control" name="vasc_id" type="text" placeholder="VASC ID" value="{{$candidate->vasc_id}}">
                                                             </div>
                                                             @endif
 
                                                         </div>
                                                         <div class="col-12 text-end">
-                                                            <button type="submit" class="btn btn-primary" onclick="submit_form(this)">{{getTranslatedText('Update')}}</button>
+                                                            <button type="submit" class="btn btn-primary" onclick="submit_form(this)">{{ __('messages.Update') }}</button>
                                                         </div>
                                                     </div>
                                                     <!-- Step 2 -->
@@ -230,12 +230,12 @@ $billing = $form_data->billing_info;
                                                             {!! $doc_html !!}
                                                             @else
                                                             <div class="col-md-12 col-sm-12 mb-2">
-                                                                <label class="form-label">{{ getTranslatedText('document') }}</label>
+                                                                <label class="form-label">{{ __('messages.document') }}</label>
                                                                 <div class="dropzone dropzone-secondary p-3" id="dropzoneArea" onclick="triggerFileInput()" style="text-align:center">
                                                                     <div class="dz-message needsclick">
                                                                         <i class="fa-solid fa-cloud-arrow-up"></i>
-                                                                        <h6>{{ getTranslatedText('upload_document_cv') }}</h6>
-                                                                        <span class="note needsclick">({{ getTranslatedText('click_to_upload') }})</span>
+                                                                        <h6>{{ __('messages.upload_document_cv') }}</h6>
+                                                                        <span class="note needsclick">({{ __('messages.click_to_upload') }})</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -243,25 +243,25 @@ $billing = $form_data->billing_info;
                                                         @endif
                                                         @if (isset(auth()->user()->interview_template) && !empty(auth()->user()->interview_template))
                                                         <div class="col-md-12 col-sm-12 mb-2">
-                                                            <label class="form-label">{{getTranslatedText('Interview Template')}}</label>
+                                                            <label class="form-label">{{ __('messages.Interview Template') }}</label>
                                                             <input type="file" name="interview_template" id="hiddenFileInput2" style="display: none;" accept="application/pdf" onchange="handleFileChange2()">
                                                             <div class="dropzone dropzone-primary p-3" id="dropzoneArea2" onclick="triggerFileInput2()" style="text-align:center">
                                                                 <div class="dz-message needsclick">
                                                                     <i class="fa-solid fa-cloud-arrow-up"></i>
-                                                                    <h6>{{ getTranslatedText('upload_interview_template') }}</h6>
-                                                                    <span class="note needsclick">({{ getTranslatedText('click_to_upload') }})</span>
+                                                                    <h6>{{ __('messages.upload_interview_template') }}</h6>
+                                                                    <span class="note needsclick">({{ __('messages.click_to_upload') }})</span>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         @endif
                                                         <div class="col-12 text-end">
-                                                            <button type="submit" class="btn btn-primary" onclick="submit_form(this)">{{getTranslatedText('Update')}}</button>
+                                                            <button type="submit" class="btn btn-primary" onclick="submit_form(this)">{{ __('messages.Update') }}</button>
                                                         </div>
                                                     </div>
                                                     <!-- Step 3 -->
                                                     <div class="tab-pane fade" id="wizard-banking" role="tabpanel" aria-labelledby="wizard-banking-tab">
                                                         <div class="row" id="billing_info_row">
-                                                        <span class="mb-2 mendatory_statment"><strong>{{getTranslatedText('mandatory_fields')}}</strong></span>
+                                                        <span class="mb-2 mendatory_statment"><strong>{{ __('messages.mandatory_fields') }}</strong></span>
                                                             @if (!empty($billing))
                                                             @foreach ($billing as $b_k => $b_v)
                                                             @php
@@ -281,32 +281,32 @@ $billing = $form_data->billing_info;
                                                                 </div>
                                                             <?php } else { ?>
                                                                 <div class="col-md-12 col-sm-6 mb-2">
-                                                                    <label class="form-label">{{getTranslatedText('note')}}</label>
-                                                                    <textarea class="form-control" name="note" placeholder="{{getTranslatedText('order_note')}}" required="">{{$candidate->note}}</textarea>
+                                                                    <label class="form-label">{{ __('messages.note') }}</label>
+                                                                    <textarea class="form-control" name="note" placeholder="{{ __('messages.order_note') }}" required="">{{$candidate->note}}</textarea>
                                                                 </div>
                                                             <?php } ?>
                                                             @endforeach
                                                             @else
                                                             <div class="col-md-12 col-sm-6 mb-2">
-                                                                <label class="form-label">{{ getTranslatedText('invoice_recipent') }} <span class="text-danger">*</span></label>
-                                                                <input class="form-control" name="pref" type="text" placeholder="{{ getTranslatedText('enter_reference_invoice') }}" required="" value="{{$candidate->referensperson}}">
+                                                                <label class="form-label">{{ __('messages.invoice_recipent') }} <span class="text-danger">*</span></label>
+                                                                <input class="form-control" name="pref" type="text" placeholder="{{ __('messages.enter_reference_invoice') }}" required="" value="{{$candidate->referensperson}}">
                                                             </div>
                                                             <div class="col-md-12 col-sm-6 mb-2">
-                                                                <label class="form-label" for="reference">{{ getTranslatedText('reference') }} <span class="text-danger">*</span></label>
-                                                                <input class="form-control" id="reference" name="ref" type="text" placeholder="{{ getTranslatedText('enter_reference') }}" required="" value="{{$candidate->reference}}">
+                                                                <label class="form-label" for="reference">{{ __('messages.reference') }} <span class="text-danger">*</span></label>
+                                                                <input class="form-control" id="reference" name="ref" type="text" placeholder="{{ __('messages.enter_reference') }}" required="" value="{{$candidate->reference}}">
                                                             </div>
                                                             <div class="col-md-12 col-sm-6 mb-2">
-                                                                <label class="form-label" for="invoiceComment">{{ getTranslatedText('invoice_comment') }}</label>
-                                                                <input class="form-control" id="invoiceComment" name="comment" type="text" placeholder="{{ getTranslatedText('invoice_comment') }}" value="{{$candidate->comment}}">
+                                                                <label class="form-label" for="invoiceComment">{{ __('messages.invoice_comment') }}</label>
+                                                                <input class="form-control" id="invoiceComment" name="comment" type="text" placeholder="{{ __('messages.invoice_comment') }}" value="{{$candidate->comment}}">
                                                             </div>
                                                             <div class="col-md-12 col-sm-6 mb-2">
-                                                                <label class="form-label" for="note">{{getTranslatedText('note')}}</label>
-                                                                <input class="form-control" id="note" name="note" type="text" placeholder="{{getTranslatedText('order_note')}}" value="{{$candidate->note}}">
+                                                                <label class="form-label" for="note">{{ __('messages.note') }}</label>
+                                                                <input class="form-control" id="note" name="note" type="text" placeholder="{{ __('messages.order_note') }}" value="{{$candidate->note}}">
                                                             </div>
                                                             @endif
                                                         </div>
                                                         <div class="col-12 text-end">
-                                                            <button type="submit" class="btn btn-primary" onclick="submit_form(this)">{{getTranslatedText('update')}}</button>
+                                                            <button type="submit" class="btn btn-primary" onclick="submit_form(this)">{{ __('messages.update') }}</button>
                                                         </div>
                                                     </div>
                                                 </form>

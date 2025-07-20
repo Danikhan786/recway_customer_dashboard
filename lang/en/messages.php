@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'upload_document_cv' => 'Upload Document/CV',
     'dashboard' => 'Dashboard',
     'swedish' => 'Swedish',
     'english' => 'English',
@@ -8,6 +9,8 @@ return [
     'order' => 'Orders',
     'archieved' => 'Archieved',
     'hello' => 'Hello',
+    'hello_message' => 'Welcome to Recway! Here you can manage your orders and account settings.',
+    'clear' => 'Clear',
     'recent_orders' => 'Recent Orders',
     'filter' => 'Filter',
     'service_categories' => 'Service Categories',
@@ -49,7 +52,12 @@ return [
     'account'=>'Account',
     'email_setting'=>'Email Setting',
     'logout'=>'Log Out',
+    'mandatory_fields' => 'Mandatory Fields',
+    'Edit Order' => 'Edit Order',
     'customer'=>'Customer',
+    'integrity_policy' => 'Integrity Policy',
+    'close' => 'Close',
+    'included_things' => 'Included Things',
     'copyright'=>'Copyright © 2024 | All Rights Reserved by',
     'name'=>"Name",
     "surname"=>"Surname",
@@ -95,6 +103,8 @@ return [
     'email_settings_note' => 'In email settings you can modify for which statuses you should receive an email notification on its update',
     'status_selection_note' => 'NOTE: (Select the statuses you want to receive an email for. On update of that status you will receive an email notification)',
     
+    'order_logs' => 'Order Logs',
+    'no_record_found' => 'No record found',
     //for add_reviewer.blade.php
     'add_reviewer' => 'Add Reviewer',
     'recway' => 'Recway',
@@ -115,6 +125,19 @@ return [
     'data_locality_description' => 'Our servers are securely located in Sweden and operated within the country.',
     'data_retention' => 'Data retention',
     'data_retention_description' => 'The system has built-in functionality to remove customer data from systems and backups.',
+
+    'all_current_orders' => 'All Current Orders',
+
+
+    'upload_document_cv' => 'Upload Document/CV',
+    'click_to_upload' => 'Click to upload',
+    'Interview Template' => 'Interview Template',
+    'upload_interview_template' => 'Upload Interview Template',
+    'order_note' => 'Order Note',
+    'invoice_recipent' => 'Invoice Recipient',
+    'enter_reference_invoice' => 'Enter Reference (Invoice Recipient)',
+    'enter_reference' => 'Enter Reference',
+
 ];
 
 
@@ -126,6 +149,14 @@ return [
 //     'create_order' => 'Create Order',
 //     'order' => 'Orders',
 //     'archieved' => 'Archieved',
+    // 'upload_document_cv' => 'Upload Document/CV',
+    // 'click_to_upload' => 'Click to upload',
+    // 'Interview Template' => 'Interview Template',
+    // 'upload_interview_template' => 'Upload Interview Template',
+    // 'order_note' => 'Order Note',
+    // 'invoice_recipent' => 'Invoice Recipient',
+    // 'enter_reference_invoice' => 'Enter Reference (Invoice Recipient)',
+    // 'enter_reference' => 'Enter Reference',
 //     'hello' => 'Hello',
 //     'recent_orders' => 'Recent Orders',
 //     'filter' => 'Filter',
